@@ -11,7 +11,7 @@ let config = {
     './src/js/index.js',
   ],
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './public/dist'),
     filename: './bundle.js',
   },
   plugins: [
@@ -30,7 +30,7 @@ let config = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: path.resolve(__dirname, './dist'),
+              publicPath: path.resolve(__dirname, './public/dist'),
               hmr: process.env.NODE_ENV === 'development',
             },
           },
