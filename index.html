@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hello</title>
-    <link rel="stylesheet" href="./dist/main.css" />
-    <script src="./dist/bundle.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Snake Canvas</title>
+  <link rel="stylesheet" href="./dist/main.css" />
+</head>
 
-  <body>
-    <p>Hello World</p>
-  </body>
+<body>
+  <div class="container">
+    <div class="game">
+      <div class="menu">
+        <div class="title">Snake</div>
+        <div class="score">Score<span id="score">0</span></div>
+      </div>
+      <div class="die-screen" id="gameOver">
+        <div class="die-title">GAME OVER</div>
+        <div class="die-description">Press <span class="reverse-color">space</span> to try again</div>
+        <div class="die-description">Press <span class="reverse-color">escape</span> to quit</div>
+      </div>
+      <div class="home-screen show" id="home">
+        <div class="home-title reverse-color">Main screen</div>
+        <ul>
+          <li class="button" id="start">Start game</li>
+          <li class="button" id="showSettings">Settings</li>
+        </ul>
+      </div>
+      <div class="settings-screen" id="settings">
+        <ul>
+          <li>
+            <label for="speed">Speed</label>
+            <input type="text" name="speed" id="speed">
+          </li>
+          <li class="button" id="quitSettings">
+            <- Go back</li> </ul> </div> <canvas></canvas>
+      </div>
+    </div>
+
+    <script src="./dist/bundle.js"></script>
+</body>
 
 </html>
